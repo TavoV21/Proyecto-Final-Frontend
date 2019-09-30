@@ -1,0 +1,42 @@
+
+<div class="card">
+    <div class="card-body">
+    <div class="col">
+    <div class="card-header">
+    <h2>Listado de Clientes </h2>
+    </div><br>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Telefonofijo</th>
+          <th>Fecha de nacimiento</th>
+          <th>Cedula</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of persona">
+          <td>{{person.cedula}}</td>
+          <td>{{person.nombre}}</td>
+          <td>{{person.apellido}}</td>
+          <td>{{person.telefonofijo}}</td>
+          <td>{{person.fechanacimiento}}</td>
+          
+          <td>
+            <button class="btn btn-secondary" (click)="editCustomer(customer)">
+              Editar
+            </button>
+            <button class="btn btn-dark" (click)="deleteCustomer(customer)" style="margin-left: 10px">
+              Borrar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

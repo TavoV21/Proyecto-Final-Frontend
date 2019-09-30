@@ -1,0 +1,29 @@
+<div class="card">
+<div class="card-body">
+<div class="col">
+    <div class="card-header">
+    <h2 class="text-center">Editar Cliente</h2>
+    </div>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  
+      <div class="form-group">
+        <label for="firstName">Nombre:</label>
+        <input formControlName="firstName" placeholder="Nombre" name="firstName" class="form-control" id="firstName" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="lastName">Apellido:</label>
+        <input formControlName="lastName" placeholder="Apellido" name="lastName" class="form-control" id="lastName" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email" required>
+      </div>
+  
+      <button class="btn btn-seconday">Aceptar</button>
+      <button class="btn btn-dark" routerLink="list-persona" style="margin-left: 10px">Regresar</button>
+    </form>
+  </div>
+</div>
+</div>

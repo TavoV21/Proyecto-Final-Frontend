@@ -1,0 +1,111 @@
+<div class="card">
+<div class="card-body">
+
+          <br><br>
+            <div class="col">
+                <form action="">
+
+
+                <div class="card-header">
+                <h2 class="text-center">Registrar Linea Telefonica</h2>
+                </div><br><br>
+                  <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="nombre">Nombre:</label>
+                    <input [(ngModel)]="persona.nombre" type="text" placeholder="Nombre" name="nombre" class="form-control" id="nombre" required>
+                  </div>
+              
+                  <div class="form-group col-md-6">
+                    <label for="apellido ">Apellido:</label>
+                    <input [(ngModel)]="persona.apellido" type="text" placeholder="Apellido" name="apellido" class="form-control" id="apellido" required>
+                  </div>
+                </div>
+            
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="telefono">Telefono Fijo:</label>
+                    <input [(ngModel)]="persona.telefonofijo" type="text" placeholder="Telefono" name="telefono" class="form-control" id="telefono" required>
+                  </div>
+            
+                  <div class="form-group col-md-6">
+                    <label for="cedula">Cedula:</label>
+                    <input [(ngModel)]="linea.perid" [(ngModel)]="persona.cedula" type="text" placeholder="Cedula" name="cedula" class="form-control" id="cedula" required>
+                  </div>
+                  </div>
+            
+                  <div class="form-row">
+                  <div class="form-group col-md-8">
+                    <label for="fecha">Fecha de Nacimiento:</label>
+                    <input [(ngModel)]="persona.fechanacimiento" type="date" id="start" name="trip-start" placeholder="Fecha de Nacimiento" name="fecha" class="form-control" id="fecha" required>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label for="estado">Tipo Plan:</label>
+                    <select [(ngModel)]="plan.planvalor" [(ngModel)]="factura.facvalor" name="select" id="estado" class="form-control">
+                      <option value="50000" selected>5GB - minutos ilimitados -$50000</option> 
+                      <option value="70000">9GB - minutos ilimitados -$70000</option>
+                      <option value="80000">17GB - minutos ilimitados -$80000</option>
+                      <option value="100000">30GB - minutos ilimitados -$100000</option>
+                    </select>
+                  </div>
+                </div>
+            
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="numerol">Numero de Linea:</label>
+                    <input  [(ngModel)]="linea.linumerolinea"  [(ngModel)]="equipo.linumerolineaeq" [(ngModel)]="plan.linumerolineatip"   [(ngModel)]="factura.linumerolineas"  type="text" placeholder="Numero de Linea" name="numerol" class="form-control" id="numerol" required>
+                  </div>
+                  
+                  <div class="form-group col-md-6">
+                    <label for="estado">Estado de Linea:</label>
+                    <select [(ngModel)]="linea.linestado" name="select" id="estado" class="form-control">
+                      <option value="Activa" selected>Activa</option> 
+                      <option value="Suspendida">Suspendida</option>
+                    </select>
+                  </div>
+                </div><br>
+                
+            
+            <div class="card-header">
+                <h2 class="text-center">Registrar Equipo</h2>
+                  </div><br><br>
+
+             <div class="form-row">
+                   <div class="form-group col-md-6">
+                    <label for="serial">Serial:</label>
+                    <input [(ngModel)]="equipo.equserial" placeholder="Serial" name="serial" class="form-control" id="serial" required>
+                  </div>
+        
+                  <div class="form-group col-md-6">
+                    <label for="marca">Marca:</label>
+                    <input [(ngModel)]="equipo.equmarca" placeholder="Marca" name="marca" class="form-control" id="marca" required>
+                  </div>
+                </div>
+          
+                <div class="form-row">  
+        
+                <div class="form-group col-md-6">
+                  <label for="descripcion">Descripcion:</label>
+                  <input [(ngModel)]="equipo.equdescripcion" placeholder="Descripcion" name="descripcion" class="form-control" id="descripcion" required>
+                </div>
+        
+        
+                <div class="form-group col-md-6">
+                  <label for="estadoeq">Estado del Equipo:</label>
+                  <select [(ngModel)]="equipo.equestado" name="select" id="estadoeq" class="form-control">
+                    <option value="Reportado" selected>Reportado</option> 
+                    <option value="No Reportado">No Reportado</option>
+                  </select>
+                </div>
+              </div><br>
+
+
+      <button class="btn btn-secondary"  (click)="GuardarTodo()">Guardar</button>
+   
+            
+                </form>
+              </div>
+            </div>
+          </div>
+
+      

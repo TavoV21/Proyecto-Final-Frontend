@@ -1,0 +1,66 @@
+
+<div class="card">
+    <div class="card-body">
+    <div class="col">
+    <div class="card-header">
+    <h2>Consultar Factura </h2>
+    </div><br>
+    <div class="card">
+        <div class="card-body">
+          <div class="col">
+            <form >
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="cedula">Cedula:</label>
+                    <input [(ngModel)]="cedula" placeholder="Cedula" name="cedula" class="form-control" id="cedula" required>
+                  </div>
+                
+                    <div class="form-group col-md-4">
+                      <label for="fecha">Fecha de Emision</label>
+                      <input type="date" id="start" name="trip-start"
+                        placeholder="Fecha de Emision" name="fecha" class="form-control" id="fecha" required>
+                    </div>
+                    <div class="form-group col-md-4" style="margin-top: 32px">
+
+                    <button class="btn btn-secondary"  (click)="onSubmit()">Consultar</button>
+                </div>
+
+            </div>
+
+            </form>
+          </div>
+        </div>
+        </div><br>
+
+    <ul class="list-group">
+        <li *ngFor="let person of persona" class="list-group-item">
+       <h1>Nombre: {{person.nombre}}</h1> 
+       
+        </li>
+      </ul><br><br>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Numero de Factura</th>
+          <th>Fecha de Emision</th>
+          <th>Valor de la Factura</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <button class="btn btn-dark" style="margin-left: 10px">
+              Eliminar Factura
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
